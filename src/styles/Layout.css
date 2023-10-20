@@ -1,0 +1,21 @@
+.navbar {
+	
+}
+
+.path {
+	padding-left: 3%;
+	color: red !important;
+	font-weight: 600 !important;
+}
+
+.navTitle {
+	padding-left: 3%;
+	font-family: Akira;
+	color: red;
+}
+
+hr {
+	background-color: red;
+	border: none;
+	height: 1px;
+}
