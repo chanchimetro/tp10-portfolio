@@ -1,8 +1,25 @@
 .navbar {
-	
+	background-color: black;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	border-bottom: 1px solid;
+	border-color: red;
+}
+
+.homeImg {
+	width: 100%;
+	height: auto;
+}
+
+.mainMenu {
+	width: 80% !important;
+	margin: 2%;
 }
 
 .path {
+	margin-top: 0.5vh !important;
+	margin-bottom: 0.5vh !important;
 	padding-left: 3%;
 	color: red !important;
 	font-weight: 600 !important;
@@ -17,5 +34,6 @@
 hr {
 	background-color: red;
 	border: none;
+	margin-bottom: 0;
 	height: 1px;
 }

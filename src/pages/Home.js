@@ -1,9 +1,15 @@
+import { Grid } from "@mui/material";
+import computerOutline from "../assets/computer-outline-right.png"
 import React from "react";
 
 function Home() {
-    return (
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/1200px-Test-Logo.svg.png"></img>
-    );
+	return (
+		<Grid className="mainMenu" container spacing={2}>
+			<Grid item xs={2}>
+				<img className="homeImg" src={computerOutline}/>
+			</Grid>
+		</Grid>
+	);
 }
 
 export default Home;
