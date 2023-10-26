@@ -14,8 +14,9 @@ function Layout() {
 	return (
 		<>
 			<nav className="navbar">
-				<h1 className="navTitle">www.Portfolio.com</h1>
-				<hr></hr>
+				<div className="navbar-top">
+					<h1 className="navTitle">www.Portfolio.com</h1>
+				</div>
 				<Breadcrumbs aria-label="breadcrumb" className="path" separator="\">
 					<Link underline="none" color="inherit" href="/">
 						C:

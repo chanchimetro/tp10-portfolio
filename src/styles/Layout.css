@@ -7,28 +7,14 @@
 	border-color: red;
 }
 
-.homeImg {
-	width: 100%;
-	height: auto;
-}
-
-.mainMenu {
-	width: 80% !important;
-	margin: 2%;
-}
-
 .path {
-	margin-top: 0.5vh !important;
-	margin-bottom: 0.5vh !important;
+	/*margin-top: 0.5vh !important;*/
+	/*margin-bottom: 0.5vh !important;*/
+	margin: 0;
+	padding: 0;
 	padding-left: 3%;
 	color: red !important;
 	font-weight: 600 !important;
-}
-
-.navTitle {
-	padding-left: 3%;
-	font-family: Akira;
-	color: red;
 }
 
 hr {
@@ -36,4 +22,16 @@ hr {
 	border: none;
 	margin-bottom: 0;
 	height: 1px;
+}
+
+.navbar-top
+{
+	border-bottom: 1px solid;
+	border-color: red;
+}
+
+.navTitle {
+	padding-left: 3%;
+	font-family: Akira;
+	color: red;
 }

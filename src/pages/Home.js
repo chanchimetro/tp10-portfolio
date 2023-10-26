@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import computerOutline from "../assets/computer-outline-right.png"
 import React from "react";
+import "../styles/Home.css";
 
 function Home() {
 	return (
