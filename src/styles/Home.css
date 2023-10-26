@@ -1,9 +1,31 @@
+.mainMenu {
+	width: 60% !important;
+	margin: 3% auto 0 !important;
+}
+
+.img-holder {
+	margin: 0;
+	padding: 20%;
+}
+
 .homeImg {
 	width: 100%;
 	height: auto;
 }
 
-.mainMenu {
-	width: 80% !important;
-	margin: 2%;
+.menu-buttons {
+	margin: auto !important;
+}
+
+.links {
+	margin: 0;
+	height: 100% !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center !important;
+	list-style: none;
+}
+
+li:not(:last-child) {
+	margin-bottom: 5%;
 }
