@@ -17,3 +17,9 @@ code {
   src: local('Akira'), url(./fonts/Akira.otf) format('opentype');
   /* other formats include: 'woff2', 'truetype, 'opentype', 'embedded-opentype', and 'svg' */
 }
+
+@font-face {
+  font-family: 'BlueScreen';
+  src: local('BlueScreen'), url(./fonts/BlueScreen.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype', 'embedded-opentype', and 'svg' */
+}

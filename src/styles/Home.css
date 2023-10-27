@@ -17,7 +17,7 @@
 	margin: auto !important;
 }
 
-.links {
+.links-list {
 	margin: 0;
 	height: 100% !important;
 	display: flex;
@@ -26,6 +26,12 @@
 	list-style: none;
 }
 
-li:not(:last-child) {
-	margin-bottom: 5%;
+.link {
+	font-family: BlueScreen;
+	color: red;
+	text-decoration: none !important;
+}
+
+.link :hover {
+	text-decoration: line-through !important;
 }

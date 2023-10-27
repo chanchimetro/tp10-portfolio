@@ -1,30 +1,35 @@
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import { Breadcrumbs, Typography, Link } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import logo from "../icon.png"
 import "../styles/Layout.css"
+import { getPathname } from "../services/scripts";
 
 function Layout() {
-	let pathname = window.location.pathname.split('/');
-	useEffect(() => {
-		pathname = window.location.pathname.split('/');
-		console.log(pathname);
-	}, []);
+	let breadcrumbs = getPathname();
 
 	return (
 		<>
 			<nav className="navbar">
 				<div className="navbar-top">
-					<h1 className="navTitle">www.Portfolio.com</h1>
+					<Link href={'/'} className="main-link">
+						<h1 className="navTitle">
+							www.Portfolio.com
+						</h1>
+					</Link>
 				</div>
-				<Breadcrumbs aria-label="breadcrumb" className="path" separator="\">
-					<Link underline="none" color="inherit" href="/">
+				<Breadcrumbs separator="\" aria-label="breadcrumb" className="path">
+					<Link underline="hover" color="inherit" href="/">
 						C:
 					</Link>
-					{pathname}
+					{breadcrumbs.map((b) =>
+						<Link underline="hover" color="inherit" href={b}>
+							{b}
+						</Link>
+					)}
 				</Breadcrumbs>
 			</nav>
-			<Outlet/>
+			<Outlet />
 		</>
 	);
 }

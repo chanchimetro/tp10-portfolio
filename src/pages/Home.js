@@ -1,30 +1,38 @@
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import computerOutline from "../assets/computer-outline-right.png"
-import React from "react";
+import computerOutline from "../assets/computer-outline-right.png";
+import computerOutlineWorks from "../assets/computer-outline-right-works.png";
+import computerOutlineFavs from "../assets/computer-outline-right-favs.png";
+import computerOutlineAboutMe from "../assets/computer-outline-right-aboutme.png";
+import React, { useState } from "react";
 import "../styles/Home.css";
 
 function Home() {
+	const [imgSrc, setImgSrc] = useState(computerOutline);
+
 	return (
 		<Grid className="mainMenu" container>
 			<Grid item xs={6}>
 				<p className="img-holder">
-					<img className="homeImg" src={computerOutline} />
+					<img className="homeImg" src={imgSrc} />
 				</p>
 			</Grid>
 			<Grid item xs={6}>
-				<ul className="links">
+				<ul className="links-list">
 					<li>
-						<Link>PROJECTS</Link>
+						<h1>
+							<Link to={'Works'} onMouseOver={() => setImgSrc(computerOutlineWorks)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">PROJECTS [プロジェクト]</Link>
+						</h1>
 					</li>
 					<li>
-						<Link>FAVOURITES</Link>
+						<h1>
+							<Link to={'Favourites'} onMouseOver={() => setImgSrc(computerOutlineFavs)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">FAVOURITES [お気に入り]</Link>
+						</h1>
 					</li>
 					<li>
-						<Link>ABOUT ME</Link>
-					</li>
-					<li>
-						<Link>HOLA</Link>
+						<h1>
+							<Link to={'AboutMe'} onMouseOver={() => setImgSrc(computerOutlineAboutMe)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">ABOUT ME [私について]</Link>
+						</h1>
 					</li>
 				</ul>
 			</Grid>
