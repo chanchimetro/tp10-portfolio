@@ -7,14 +7,13 @@ import computerOutlineAboutMe from "../assets/computer-outline-right-aboutme.png
 import React, { useContext, useState } from "react";
 import "../styles/Home.css";
 import projectsContext from "../context/projectsContext";
-import projectsContext from "../context/projectsContext";
 import ProjectCard from "../components/js/ProjectCard";
 import favContext from "../context/favContext";
 
 function Home() {
 	const [imgSrc, setImgSrc] = useState(computerOutline);
 	const pContext = useContext(projectsContext);
-	const fContext = useContext(favContext);
+	const {favProj, setFavProj} = useContext(favContext);
 
 	return (
 		<>
@@ -28,7 +27,7 @@ function Home() {
 					<ul className="links-list">
 						<li>
 							<h1>
-								<Link to={'Works'} onMouseOver={() => setImgSrc(computerOutlineWorks)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">PROJECTS [プロジェクト]</Link>
+								<Link to={'Works'} onMouseOver={() => setImgSrc(computerOutlineWorks)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">WORKS [プロジェクト]</Link>
 							</h1>
 						</li>
 						<li>
@@ -50,9 +49,7 @@ function Home() {
 				{
 					pContext.projects.map((p) => (
 						<Grid item xs={6}>
-							<Link to={'Project/1'} className="project-link">
 								<ProjectCard project={p}/>
-							</Link>
 						</Grid>
 					))
 				}

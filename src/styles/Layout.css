@@ -26,15 +26,18 @@ hr {
 
 .navbar-top
 {
+	display: flex;
+	justify-content: center;
+	height: 60%;
 	border-bottom: 1px solid;
 	border-color: red;
 }
 
 .navTitle {
-	padding-left: 3%;
 	font-family: Akira;
 	color: red;
 	text-decoration: none;
+	font-size: 3vh;
 }
 
 .main-link

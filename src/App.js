@@ -12,23 +12,20 @@ import projectsContext from './context/projectsContext';
 import favContext from './context/favContext';
 
 function App() {
-  const [projects, setProjects] = useState([])
-  const [favProj, setFavProj] = useState([])
+  let favs = localStorage.getItem("favs");
+  const [projects, setProjects] = useState([]);
+  const [favProj, setFavProj] = useState(favs ? JSON.parse(favs) : []);
+
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(favProj));
+  }, [favProj]);
 
   useEffect(() => {
     axios.get('data.json')
       .then(res => {
         setProjects(res.data)
-      })
-  }, [])
-
-  useEffect(() => {
-    localStorage.length !== 0 ? setFavProj(JSON.parse(localStorage.getItem("favProj"))) : setFavProj([])
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem("favProj", JSON.stringify(favProj))
-  }, [favProj])
+      });
+  }, []);
 
   return (
     <projectsContext.Provider value={{ projects, setProjects }}>

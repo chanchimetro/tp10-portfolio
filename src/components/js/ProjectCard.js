@@ -1,40 +1,43 @@
 import '../css/ProjectCard.css';
-import React from "react";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import React, { useContext, useState, useEffect } from "react";
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
-
-/*
-{
-		"id": 1,
-		"titulo": "E-Commerce",
-		"descripcion": "Una copia del famoso E-Commerce Mercado Libre",
-		"url": "https://github.com/martomorri/tp7_router.git",
-		"tecnologia": "React",
-		"favorito": false,
-		"fecha_creacion": "2023/07/13",
-		"imagenes": [
-		]
-}
-*/
+import favIcon from "../../assets/fav.png"
+import noFavIcon from "../../assets/nofav.png"
+import favContext from '../../context/favContext';
 
 function ProjectCard({ project }) {
+	const { favProj, setFavProj } = useContext(favContext);
+	const [fav, setFav] = useState(false);
+	const handleFav = () => {
+		if (fav) {
+			setFavProj(
+				favProj.filter(f => f.id !== project.id)
+			)
+		} else {
+			setFavProj([...favProj, project])
+		}
+	}
+
+	useEffect(() => {
+		setFav(false);
+		favProj.forEach(f => {
+			if (f.id === project.id) setFav(true)
+		})
+	}, [favProj])
+
 	return (
 		<div className='card'>
-			<Grid container>
+			<Grid container className='card-header'>
 				<Grid item xs={10}>
 					<h2>
 						{project.titulo}
 					</h2>
 				</Grid>
-				<Grid item xs={2}>
-					<h2>
-						ok
-					</h2>
+				<Grid item xs={2} className='header-item'>
+					<Button variant='danger' className='fav-btn' onClick={() => handleFav()}>
+						<img className='img' src={fav ? favIcon : noFavIcon} alt="favBtn" />
+					</Button>
 				</Grid>
 			</Grid>
 			<p className='card-desc'>

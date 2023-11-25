@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    padding-left: 3%;
     border: solid 3px;
     border-color: red;
     color: red;
@@ -12,10 +11,28 @@
 }
 
 .card-desc {
+    margin-left: 3%;
     font-size: 2.5vh;
 }
 
+.card-header {
+    height: 20%;
+}
+
+.header-item {
+    height: 100%;
+}
+
+.fav-btn {
+    height: 100%;
+}
+
+.img {
+    height: 100%;
+}
+
 .card h2 {
+    margin-left: 3%;
 	font-family: Akira;
 	color: red;
 	text-decoration: none;
