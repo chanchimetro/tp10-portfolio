@@ -8,8 +8,8 @@
 }
 
 .path {
-	/*margin-top: 0.5vh !important;*/
-	/*margin-bottom: 0.5vh !important;*/
+	margin-top: 0.5vh !important;
+	margin-bottom: 0.5vh !important;
 	margin: 0;
 	padding: 0;
 	padding-left: 3%;
@@ -37,7 +37,7 @@ hr {
 	font-family: Akira;
 	color: red;
 	text-decoration: none;
-	font-size: 3vh;
+	font-size: 3.8vh;
 }
 
 .main-link

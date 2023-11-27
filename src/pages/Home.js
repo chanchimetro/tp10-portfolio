@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import computerOutline from "../assets/computer-outline-right.png";
@@ -5,15 +6,14 @@ import computerOutlineWorks from "../assets/computer-outline-right-works.png";
 import computerOutlineFavs from "../assets/computer-outline-right-favs.png";
 import computerOutlineAboutMe from "../assets/computer-outline-right-aboutme.png";
 import React, { useContext, useState } from "react";
-import "../styles/Home.css";
 import projectsContext from "../context/projectsContext";
-import ProjectCard from "../components/js/ProjectCard";
 import favContext from "../context/favContext";
+import ProjectGallery from "../components/js/ProjectGallery";
 
 function Home() {
 	const [imgSrc, setImgSrc] = useState(computerOutline);
 	const pContext = useContext(projectsContext);
-	const {favProj, setFavProj} = useContext(favContext);
+	const { favProj, setFavProj } = useContext(favContext);
 
 	return (
 		<>
@@ -44,16 +44,7 @@ function Home() {
 				</Grid>
 			</Grid>
 			<hr />
-			<br />
-			<Grid container spacing={3} className="projCont">
-				{
-					pContext.projects.map((p) => (
-						<Grid item xs={6}>
-								<ProjectCard project={p}/>
-						</Grid>
-					))
-				}
-			</Grid>
+			<ProjectGallery array={pContext.projects} />
 		</>
 	);
 }
