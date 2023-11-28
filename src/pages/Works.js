@@ -8,6 +8,9 @@ function Works() {
 
 	return (
 		<>
+		<h1>
+			Projectos
+		</h1>
 			<ProjectGallery array={pContext.projects}/>
 		</>
 	);

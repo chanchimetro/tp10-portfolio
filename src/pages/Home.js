@@ -9,11 +9,12 @@ import React, { useContext, useState } from "react";
 import projectsContext from "../context/projectsContext";
 import favContext from "../context/favContext";
 import ProjectGallery from "../components/js/ProjectGallery";
+import { useEffect } from "react";
 
 function Home() {
-	const [imgSrc, setImgSrc] = useState(computerOutline);
 	const pContext = useContext(projectsContext);
-	const { favProj, setFavProj } = useContext(favContext);
+	const [imgSrc, setImgSrc] = useState(computerOutline);
+	const [projSample, setProjSample] = useState([]);
 
 	return (
 		<>
@@ -44,7 +45,7 @@ function Home() {
 				</Grid>
 			</Grid>
 			<hr />
-			<ProjectGallery array={pContext.projects} />
+			<ProjectGallery array={projSample} />
 		</>
 	);
 }
