@@ -1,0 +1,14 @@
+.galleryCont {
+    width: 80% !important;
+    margin: 3% auto !important;
+}
+
+.noWorks {
+    color: red;
+    font-family: BlueScreen;
+}
+
+.galleryTitle {
+    color: red;
+    font-family: Akira;
+}

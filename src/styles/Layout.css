@@ -14,7 +14,26 @@
 	padding: 0;
 	padding-left: 3%;
 	color: red !important;
-	font-weight: 600 !important;
+	font-weight: 200 !important;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.footer {
+	background-color: black;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	border-top: 1px solid;
+	border-color: red;
+}
+
+.footerText {
+	padding-left: 3%;
+	color: red;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 hr {
@@ -37,7 +56,7 @@ hr {
 	font-family: Akira;
 	color: red;
 	text-decoration: none;
-	font-size: 3.8vh;
+	font-size: 3.5vh;
 }
 
 .main-link

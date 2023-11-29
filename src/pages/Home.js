@@ -1,5 +1,5 @@
 import "../styles/Home.css";
-import { Grid } from "@mui/material";
+import { Badge, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import computerOutline from "../assets/computer-outline-right.png";
 import computerOutlineWorks from "../assets/computer-outline-right-works.png";
@@ -7,14 +7,28 @@ import computerOutlineFavs from "../assets/computer-outline-right-favs.png";
 import computerOutlineAboutMe from "../assets/computer-outline-right-aboutme.png";
 import React, { useContext, useState } from "react";
 import projectsContext from "../context/projectsContext";
-import favContext from "../context/favContext";
 import ProjectGallery from "../components/js/ProjectGallery";
 import { useEffect } from "react";
+import favContext from "../context/favContext";
 
 function Home() {
 	const pContext = useContext(projectsContext);
+	const fContext = useContext(favContext);
 	const [imgSrc, setImgSrc] = useState(computerOutline);
 	const [projSample, setProjSample] = useState([]);
+
+	useEffect(() => {
+		if (pContext.projects.lenght > 0) {
+			setProjSample([
+				pContext.projects[0],
+				pContext.projects[1],
+				pContext.projects[2],
+				pContext.projects[3],
+				pContext.projects[4],
+				pContext.projects[5],
+			])
+		}
+	}, [pContext.projects])
 
 	return (
 		<>
@@ -33,7 +47,16 @@ function Home() {
 						</li>
 						<li>
 							<h1>
-								<Link to={'Favourites'} onMouseOver={() => setImgSrc(computerOutlineFavs)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">FAVOURITES [お気に入り]</Link>
+								<Badge
+									color="error"
+									anchorOrigin={{
+										vertical: 'top',
+										horizontal: 'right',
+									}}
+									badgeContent={fContext.favProj.length}
+								>
+									<Link to={'Favourites'} onMouseOver={() => setImgSrc(computerOutlineFavs)} onMouseLeave={() => setImgSrc(computerOutline)} className="link">FAVOURITES [お気に入り]</Link>
+								</Badge>
 							</h1>
 						</li>
 						<li>

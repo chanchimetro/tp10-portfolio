@@ -1,0 +1,23 @@
+.profileCont {
+    width: 80%;
+    border: 1px solid;
+    border-color: red;
+    margin: 5% auto;
+    padding: 1%;
+}
+
+.profileImg {
+    border: 1px solid;
+    border-color: red;
+    padding: 5%;
+}
+
+.profileName {
+    font-family: Akira;
+    color: red;
+}
+
+.profileDesc {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}

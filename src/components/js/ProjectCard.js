@@ -23,7 +23,7 @@ function ProjectCard({ project }) {
 		setFav(false);
 		favProj.forEach(f => {
 			if (f.id === project.id) setFav(true)
-		})
+		});
 	}, [favProj])
 
 	return (

@@ -11,7 +11,7 @@
 }
 
 .card-desc {
-    margin-left: 3%;
+    margin: 0 3%;
     font-size: 2.5vh;
 }
 
@@ -24,7 +24,10 @@
 }
 
 .fav-btn {
+    margin-right: 5% !important;
+    float: right;
     height: 100%;
+    width: 10%;
 }
 
 .img {
