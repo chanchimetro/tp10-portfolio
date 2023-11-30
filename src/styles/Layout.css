@@ -23,6 +23,7 @@
 
 .footer {
 	background-color: black;
+	padding-left: 3%;
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
@@ -30,8 +31,18 @@
 	border-color: red;
 }
 
+.modal {
+	position: absolute;
+	width: 50%;
+	height: auto;
+	background-color: black;
+	top: '50%';
+	left: '50%';
+	border: '2px solid #000';
+}
+
 .footerText {
-	padding-left: 3%;
+
 	color: red;
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -43,8 +54,7 @@ hr {
 	height: 1px;
 }
 
-.navbar-top
-{
+.navbar-top {
 	display: flex;
 	justify-content: center;
 	height: 60%;
@@ -59,7 +69,6 @@ hr {
 	font-size: 3.5vh;
 }
 
-.main-link
-{
+.main-link {
 	text-decoration: none !important;
 }

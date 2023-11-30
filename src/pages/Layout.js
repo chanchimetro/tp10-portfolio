@@ -1,4 +1,4 @@
-import { Breadcrumbs, Typography } from "@mui/material";
+import { Breadcrumbs, Typography, Modal, Box, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import logo from "../icon.png"
@@ -8,6 +8,9 @@ import { Link, useLocation } from "react-router-dom";
 
 function Layout() {
 	const [breadcrumbs, setBreadcrumbs] = useState(getPathname());
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 
 	const location = useLocation();
 
@@ -17,9 +20,19 @@ function Layout() {
 
 	return (
 		<>
+			<Modal
+				open={open}
+				onClose={handleClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<Box className="modal">
+					gr3rgregrege
+				</Box>
+			</Modal>
 			<nav className="navbar">
 				<div className="navbar-top">
-					<Link href={'/'} className="main-link">
+					<Link to={'/'} className="main-link">
 						<h1 className="navTitle">
 							www.Portfolio.com
 						</h1>
@@ -38,7 +51,7 @@ function Layout() {
 			</nav>
 			<Outlet />
 			<span className="footer">
-				<p className="footerText">This is a footer</p>
+				<p className="footerText"><Button onClick={handleOpen}>Open modal</Button></p>
 			</span>
 		</>
 	);
