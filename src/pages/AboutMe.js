@@ -10,29 +10,8 @@ function AboutMe() {
 				<img className="profileImg" src={imgSrc}></img>
 			</Grid>
 			<Grid item xs={9}>
-				<h1 className="profileName">Ignacio Lopez Abraham - student</h1>
-				<p className="profileDesc">Mido un metro ochenta y uno
-					Tengo un sillón azul
-					En mi cuarto hay un baúl
-					Y me gusta el almendrado
-					Me despierto alunado
-					Mi madre es medio terca
-					Aunque nunca estuve preso, anduve cerca
-					Soy de Aries, pelo castaño
-					Algo tacaño y no colecciono nada
-					Guardo la ropa ordenada
-					Me aburro en nochebuena
-					Si estornudo no hago ruido
-					Y no hablo con la boca llena
-					Puedo decir que soy de pocos amigos
-					Pero de mis enemigos, no sé cuantos cosecho
-					Tengo el ojo derecho desviado
-					Dicen que soy bueno, aunque no sea bautizado
-					Nací a las tres de la mañana
-					Me llevo bien con mi hermana
-					No creo en ovnis ni en zombies
-					Y uso prendas talle "M"
-					Juego con fuego, aunque el fuego me queme.
+				<h1 className="profileName">Ignacio L████ A█████ - student</h1>
+				<p className="profileDesc">My name is not important... What is important is what I'm going to do. I just fucking hate this world and the human worms feasting on it's carcass. My whole life is just cold, bitter hatred... and I always wanted to die violently. This the time of vengeance and no life is worth saving. And I will put in the grave as many as I can. It's time for me to kill... and it's time for me to die.
 					</p>
 					<ul className="profileList">
 						<li><b>Knowledge:</b> ReactJS, NodeJS, MSsql, HTML, CSS, C#, C++</li>

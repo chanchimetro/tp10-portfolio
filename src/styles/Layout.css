@@ -1,6 +1,6 @@
 .navbar {
-	background-color: black;
 	position: fixed;
+	background-color: black;
 	top: 0px;
 	width: 100%;
 	border-bottom: 1px solid;
@@ -21,12 +21,34 @@
 	text-decoration: none;
 }
 
+.footer-link-cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.footer-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.footer-link-cont a {
+	color: red;
+	font-family: 'Courier New', Courier, monospace;
+}
+
 .footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	background-color: black;
-	padding-left: 3%;
+	padding-left: 0%;
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
+	padding-top: 1vh;
+	padding-bottom: 1.5vh;
 	border-top: 1px solid;
 	border-color: red;
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    border: solid 3px;
+    border: solid 2px;
     border-color: red;
     color: red;
     font-family: monospace;
@@ -24,8 +24,6 @@
 }
 
 .fav-btn {
-    margin-right: 5% !important;
-    float: right;
     height: 100%;
     width: 10%;
 }

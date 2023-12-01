@@ -1,12 +1,14 @@
 import '../css/ProjectCard.css';
 import React, { useContext, useState, useEffect } from "react";
 import Button from '@mui/material/Button';
-import { Grid } from '@mui/material';
+import { Grid, IconButton } from '@mui/material';
 import favIcon from "../../assets/fav.png"
 import noFavIcon from "../../assets/nofav.png"
 import favContext from '../../context/favContext';
+import ProjectModal from './ProjectModal.js';
 
 function ProjectCard({ project }) {
+	const [show, setShow] = useState(false);
 	const { favProj, setFavProj } = useContext(favContext);
 	const [fav, setFav] = useState(false);
 	const handleFav = () => {
@@ -19,6 +21,10 @@ function ProjectCard({ project }) {
 		}
 	}
 
+	const handleModal = () => {
+		setShow(!show);
+	}
+
 	useEffect(() => {
 		setFav(false);
 		favProj.forEach(f => {
@@ -27,23 +33,27 @@ function ProjectCard({ project }) {
 	}, [favProj])
 
 	return (
-		<div className='card'>
-			<Grid container className='card-header'>
-				<Grid item xs={10}>
-					<h2>
-						{project.titulo}
-					</h2>
+		<>
+		<ProjectModal show={show} handleModal={handleModal}/>
+			<div className='card'>
+				<Grid container className='card-header'>
+					<Grid item xs={11}>
+						<h2>
+							{project.titulo}
+						</h2>
+					</Grid>
+					<Grid item xs={1} className='header-item'>
+						<IconButton variant='danger' className='fav-btn' onClick={() => handleFav()}>
+							<img className='img' src={fav ? favIcon : noFavIcon} alt="favBtn" />
+						</IconButton>
+					</Grid>
 				</Grid>
-				<Grid item xs={2} className='header-item'>
-					<Button variant='danger' className='fav-btn' onClick={() => handleFav()}>
-						<img className='img' src={fav ? favIcon : noFavIcon} alt="favBtn" />
-					</Button>
-				</Grid>
-			</Grid>
-			<p className='card-desc'>
-				{project.descripcion}
-			</p>
-		</div>
+				<p className='card-desc'>
+					{project.descripcion}
+				</p>
+				<Button variant='link' onClick={handleModal}>More Info</Button>
+			</div>
+		</>
 	);
 }
 
