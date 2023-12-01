@@ -94,3 +94,21 @@ hr {
 .main-link {
 	text-decoration: none !important;
 }
+
+input {
+	margin-left: 8px;
+	padding: 2px;
+	border: 1px solid red;
+	color: red;
+	background-color: black;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.form-label {
+	color: red;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.form-btn {
+	margin-left: 8px;
+}

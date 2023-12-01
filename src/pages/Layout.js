@@ -1,4 +1,5 @@
 import { Breadcrumbs, Button, Grid } from "@mui/material";
+import { useForm } from "react-hook-form"
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import "../styles/Layout.css"
@@ -7,8 +8,14 @@ import { Link, useLocation } from "react-router-dom";
 
 function Layout() {
 	const [breadcrumbs, setBreadcrumbs] = useState(getPathname());
-	const [open, setOpen] = useState(false);
-	const handleOpen = () => setOpen(true);
+
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm()
+
+	const onSubmit = (data) => console.log(data)
 
 	const location = useLocation();
 
@@ -45,9 +52,12 @@ function Layout() {
 					<a href="https://www.linkedin.com/in/ignaciolopezabraham">LinkedIn</a>
 				</Grid>
 				<Grid item xs={6} className="footer-form">
-						<input placeholder="e-mail" type="email"></input>
-						<input placeholder="(nice) Message" type="text"></input>
-						<button>Send!</button>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<label className="form-label">Contact:</label>
+						<input placeholder="e-mail" {...register("email")} />
+						<input placeholder="message" {...register("message")} />
+						<Button color="error" className="form-btn" type="submit">Send</Button>
+					</form>
 				</Grid>
 			</Grid>
 		</>

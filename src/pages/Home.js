@@ -18,7 +18,8 @@ function Home() {
 	const [projSample, setProjSample] = useState([]);
 
 	useEffect(() => {
-		if (pContext.projects.lenght > 0) {
+		console.log(projSample);
+		if (pContext.projects) {
 			setProjSample([
 				pContext.projects[0],
 				pContext.projects[1],
@@ -28,7 +29,7 @@ function Home() {
 				pContext.projects[5],
 			])
 		}
-	}, [pContext.projects])
+	}, [pContext])
 
 	return (
 		<>
@@ -69,6 +70,9 @@ function Home() {
 			</Grid>
 			<hr />
 			<ProjectGallery array={projSample} />
+			<br/>
+			<br/>
+			<br/>
 		</>
 	);
 }

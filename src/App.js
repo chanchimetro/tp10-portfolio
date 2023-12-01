@@ -13,7 +13,7 @@ import favContext from './context/favContext';
 
 function App() {
   let favs = localStorage.getItem("favs");
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState();
   const [favProj, setFavProj] = useState(favs ? JSON.parse(favs) : []);
 
   useEffect(() => {
