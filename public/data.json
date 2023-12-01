@@ -2,111 +2,121 @@
 	{
 		"id": 1,
 		"titulo": "PracticaRN - Login",
-		"descripcion": "Un simple sistema de login y registro, montado con React Native y Firebase.",
+		"descripcion": "Simple Auth functions (Login & Register) built with ReactNative and Firebase.",
 		"url": "https://github.com/chanchimetro/PracticaRN-Login",
 		"tecnologia": "React Native",
 		"favorito": false,
 		"fecha_creacion": "2023/07/13",
 		"imagenes": [
+			"/images/1.png"
 		]
 	},
 	{
 		"id": 2,
 		"titulo": "productosV2",
-		"descripcion": "Una simple plataforma de E-Commerce.",
+		"descripcion": "A simple E-Commerce platform.",
 		"url": "https://github.com/chanchimetro/tp7_productosV2",
 		"tecnologia": "React",
 		"favorito": false,
 		"fecha_creacion": "2023/06/09",
 		"imagenes": [
+			"/images/2.png"
 		]
 	},
 	{
 		"id": 3,
-		"titulo": "Gestor de citas",
-		"descripcion": "Un gestor de citas de veterinario",
+		"titulo": "Appointment Manager",
+		"descripcion": "Veterinarian appointment manager.",
 		"url": "https://github.com/chanchimetro/TP4-Citas_01",
 		"tecnologia": "Javascript Vanilla",
 		"favorito": false,
 		"fecha_creacion": "2023/05/04",
 		"imagenes": [
+			"/images/3.png"
 		]
 	},
 	{
 		"id": 4,
 		"titulo": "ToDo List",
-		"descripcion": "Una lista de tareas con boton para borrar, completar y agregar cosas para hacer",
+		"descripcion": "Simple To-Do list, functions include creating, deleting and completing items.",
 		"url": "https://github.com/chanchimetro/TODO-List",
 		"tecnologia": "Javascript Vanilla",
 		"favorito": false,
 		"fecha_creacion": "2023/03/23",
 		"imagenes": [
+			"/images/4.png"
 		]
 	},
 	{
 		"id": 5,
-		"titulo": "Sala de Escape",
-		"descripcion": "Pequeño juego de puzzles y trivia.",
+		"titulo": "Virtual Escape Room",
+		"descripcion": "Little puzzle & trivia game.",
 		"url": "https://github.com/chanchimetro/TP05_SalaDeEscape",
 		"tecnologia": "C# .net MVC",
 		"favorito": false,
 		"fecha_creacion": "2022/08/18",
 		"imagenes": [
+			"/images/5.jpg"
 		]
 	},
 	{
 		"id": 6,
 		"titulo": "APIzzas",
-		"descripcion": "Una pequeña api que sirve pizzas (ja!) y la funcion para crearlas.",
+		"descripcion": "A little API that serves (haha) pizzas and the ability to create new ones.",
 		"url": "https://github.com/chanchimetro/ApiPizzas",
-		"tecnologia": "Javascript / Chrome Extension",
+		"tecnologia": "NodeJS",
 		"favorito": false,
 		"fecha_creacion": "2023/05/15",
 		"imagenes": [
+			"/images/6.jpg"
 		]
 	},
 	{
 		"id": 7,
-		"titulo": "Quien quiere ser millonario?",
-		"descripcion": "Como el juego, pero peor.",
+		"titulo": "Who wants to be a millionare?",
+		"descripcion": "Like the gameshow, but worse.",
 		"url": "https://github.com/SamiAyala/TP7.QuienQuiereSerMillonario",
 		"tecnologia": "C# .net MVC",
 		"favorito": false,
 		"fecha_creacion": "2022/05/26",
 		"imagenes": [
+			"/images/7.jpg"
 		]
 	},
 	{
 		"id": 8,
-		"titulo": "Personajes",
-		"descripcion": "Un indice de multiples personajes ficticios.",
+		"titulo": "Characters",
+		"descripcion": "A hub that serves as a character index.",
 		"url": "https://github.com/chanchimetro/TP-Personajes",
 		"tecnologia": "React",
 		"favorito": false,
 		"fecha_creacion": "2023/05/29",
 		"imagenes": [
+			"/images/8.png"
 		]
 	},
 	{
 		"id": 9,
 		"titulo": "Imageboard Test",
-		"descripcion": "Tablon de imagenes simple. Con un gran titulo.",
+		"descripcion": "Simple imageboard. it's best attribute is it's title.",
 		"url": "https://github.com/SamiAyala/TP9-Final-Integrador",
 		"tecnologia": "C# .net MVC",
 		"favorito": false,
 		"fecha_creacion": "2022/10/13",
 		"imagenes": [
+			"/images/9.png"
 		]
 	},
 	{
 		"id": 10,
 		"titulo": "Flag Guesser",
-		"descripcion": "Juego de trivia sobre banderas woww.",
+		"descripcion": "Little flag guessing game.",
 		"url": "https://github.com/martomorri/tp6_banderitasgod",
 		"tecnologia": "React Native",
 		"favorito": false,
 		"fecha_creacion": "2023/08/04",
 		"imagenes": [
+			"/images/10.png"
 		]
 	}
 ]

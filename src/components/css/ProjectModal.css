@@ -1,23 +1,38 @@
 .modal {
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.158);
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.158);
 }
 
 .modal-div {
-    padding: 1%;
-    position: 'absolute';
-    background-color: black;
-    color: red;
-    border: 2px solid red;
+	padding: 1%;
+	position: 'absolute';
+	background-color: black;
+	width: 50%;
+	color: red;
+	border: 2px solid red;
 }
 
 #modal-modal-title {
-    font-family: akira;
+	font-family: Akira;
+}
+
+.proj-img {
+	padding: 1%;
+	border: 1px solid red;
+	width: 100%;
+}
+
+.proj-img-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
 }
 
 #modal-modal-description {
-    font-family: 'Courier New', Courier, monospace;
+	color: red;
+	font-family: 'Courier New', Courier, monospace;
 }

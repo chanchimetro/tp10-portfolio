@@ -11,6 +11,7 @@ function ProjectCard({ project }) {
 	const [show, setShow] = useState(false);
 	const { favProj, setFavProj } = useContext(favContext);
 	const [fav, setFav] = useState(false);
+
 	const handleFav = () => {
 		if (fav) {
 			setFavProj(
@@ -34,7 +35,7 @@ function ProjectCard({ project }) {
 
 	return (
 		<>
-		<ProjectModal show={show} handleModal={handleModal}/>
+		<ProjectModal show={show} handleModal={handleModal} project={project}/>
 			<div className='card'>
 				<Grid container className='card-header'>
 					<Grid item xs={11}>
